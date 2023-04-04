@@ -2,17 +2,17 @@ version: '3'
 
 name: 'sdl_docker'
 services:
-  web:
-    container_name: 'web'
+  html:
+    container_name: 'html'
     image: nginx:1.11-alpine
     build: .
     ports:
       - 80:80
     depends_on:
-      - db
+      - dbase
 
-  db:
-    container_name: 'db'
+  dbase:
+    container_name: 'dbase'
     image: postgres
     ports:
       - "5432:5432"
@@ -21,11 +21,11 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: database
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - dbase-data:/var/lib/postgresql/data
 
 volumes:
-  web-data:
-  db-data:
+  html-data:
+  dbase-data:
 
 networks:
   mynetwork:
