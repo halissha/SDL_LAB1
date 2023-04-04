@@ -61,6 +61,8 @@ docker/docker-bench-security
 [PASS] 5.30  - Ensure the host's user namespaces is not shared
 [PASS] 5.31  - Ensure the Docker socket is not mounted inside any containers
 ```
+### Получим исправленный docker-compose
+
 ## Сканирование исправленного docker-compose
 ```sh
 [INFO] 5 - Container Runtime
