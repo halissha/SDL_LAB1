@@ -4,3 +4,8 @@
 ```php
 docker-compose up -d --build
 ```
+## Запуск утилиты безопасности docker-bench-security
+```php
+docker-compose up -d --build
+```
+
